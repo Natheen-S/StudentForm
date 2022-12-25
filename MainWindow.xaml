@@ -1,0 +1,80 @@
+﻿<Window x:Class="StudentForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentForm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\nathe\Downloads\Telegram Desktop\hand-painted-watercolor-pastel-sky-background_23-2148907305.webp"></ImageBrush>
+    </Window.Background>
+    <ScrollViewer >
+        <Grid >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Employee Details" Grid.Row="0" Grid.Column="0" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
+            <Label Content="Name" Grid.Row="1" Grid.Column="1" FontSize="17" ></Label>
+            <Label Content="Age" Grid.Row="2" Grid.Column="1" FontSize="17" ></Label>
+            <Label Content="Qualification" Grid.Row="3" Grid.Column="1" FontSize="17" Grid.ColumnSpan="2" Margin="0,0,185,28"></Label>
+            <Label Content="Gender" Grid.Row="4" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Mobile Number" Grid.Row="5" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Email Id" Grid.Row="6" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Experienced" Grid.Row="7" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Date Of Birth" Grid.Row="8" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Skills" Grid.Row="9" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Nationality" Grid.Row="10" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Marital Status" Grid.Row="11" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="SSLC %" Grid.Row="12" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="HSC %" Grid.Row="13" Grid.Column="1" FontSize="17"></Label>
+            <Label Content="Address" Grid.Row="14" Grid.Column="1" FontSize="17"></Label>
+            <TextBox x:Name="txtbox_name" Grid.Row="1" Grid.Column="2" FontSize="17" Height="25" Margin="0,4,301,4"/>
+            <TextBox x:Name="txtbox_age" Grid.Row="2" Grid.Column="2" FontSize="17"  Height="25" HorizontalAlignment="Left" Margin="0,3,0,4" Width="60"></TextBox>
+            <RadioButton Content="B.Tech." Grid.Column="2" Grid.Row="3" Margin="0,10,51,28" GroupName="Qualification"/>
+            <RadioButton Content="B.E" Grid.Column="2" Grid.Row="3" Margin="100,10,51,0" Height="15" VerticalAlignment="Top" GroupName="Qualification"/>
+            <RadioButton Content="Male" Grid.Column="2" Grid.Row="4" Margin="0,10,125,32" Grid.RowSpan="2" GroupName="Gender"></RadioButton>
+            <RadioButton Content="Female" Grid.Column="2" Grid.Row="4" Margin="100,10,125,0" Height="15" VerticalAlignment="Top" GroupName="Gender"></RadioButton>
+            <TextBox x:Name="txtbox_number" Grid.Row="5" Grid.Column="2" FontSize="17" Height="25" Margin="0,4,301,3"></TextBox>
+            <TextBox x:Name="txtbox_email" Grid.Row="6" Grid.Column="2" FontSize="17" Height="25" Margin="0,4,234,4"></TextBox>
+            <RadioButton Content="Fresher" Grid.Column="2" Grid.Row="7" Margin="0,5,0,32" Grid.RowSpan="2" GroupName="Experienced"></RadioButton>
+            <RadioButton Content="Experienced" Grid.Column="2" Grid.Row="7" Margin="100,5,0,0" Height="15" VerticalAlignment="Top" GroupName="Experienced"></RadioButton>
+            <TextBox x:Name="txtbox_dob" Grid.Row="8" Grid.Column="2" Height="25" Margin="5,6,428,2"/>
+            <RadioButton x:Name="rdbtn_csharp" Content="C#" Grid.Column="2" Grid.Row="9" FontSize="17" Margin="0,10,204,16" GroupName="Skills" Click="RadioButton_Click_1"/>
+            <RadioButton x:Name="rdbtn_c" Content="C" Grid.Column="2" Grid.Row="9" FontSize="17" Margin="100,10,166,16" GroupName="Skills" Click="RadioButton_Click_1"/>
+            <RadioButton x:Name="rdbtn_cplus" Content="C++" Grid.Column="2" Grid.Row="9" FontSize="17" Margin="180,10,166,16" GroupName="Skills" Click="RadioButton_Click_1"></RadioButton>
+            <RadioButton x:Name="rdbtn_fsharp" Content="F#" Grid.Column="2" Grid.Row="9" FontSize="17" Margin="275,10,166,16" GroupName="Skills" Click="RadioButton_Click_1"></RadioButton>
+            <RadioButton Content="India" x:Name="rdbtn_india" Grid.Column="2" Grid.Row="10" FontSize="17" Margin="0,7,0,5" GroupName="Country"></RadioButton>
+            <RadioButton Content="Others" x:Name="rdbtn_others" Grid.Column="2" Grid.Row="10" FontSize="17" Margin="100,7,0,5" GroupName="Country" Click="RadioButton_Click"></RadioButton>
+            <TextBox x:Name="txtbox_nationality" Grid.Row="10" Grid.Column="2" Margin="200,7,234,5" FontSize="17" Height="25" IsEnabled="False"></TextBox>
+            <RadioButton Content="Married" Grid.Column="2" Grid.Row="11" FontSize="17" Margin="0,5,379,0" GroupName="MStatus"></RadioButton>
+            <RadioButton Content="Unmarried" Grid.Column="2" Grid.Row="11" FontSize="17" Margin="100,5,379,0" GroupName="MStatus"></RadioButton>
+            <TextBox x:Name="txtbox_sslc" Grid.Row="12" Grid.Column="2" FontSize="17"  Width="50" HorizontalAlignment="Left" Height="25"/>
+            <TextBox x:Name="txtbox_hlc" Grid.Row="13" Grid.Column="2" FontSize="17" Width="50" Height="25" HorizontalAlignment="Left" />
+            <TextBox x:Name="txtbox_address" Grid.Row="14" Grid.Column="2" FontSize="17" AcceptsReturn="True" HorizontalAlignment="Left" Width="250" Height="90" />
+            <Button x:Name="btn_sumbit" Grid.Column="0" Grid.Row="15" FontSize="20" FontWeight="DemiBold"  Click="btn_sumbit_Click" Background="Wheat" Grid.ColumnSpan="3" HorizontalAlignment="Center" Width="100" Height="25" Content="Sumbit" Margin="0,15,0,0"></Button>
+        </Grid>
+    </ScrollViewer>
+</Window>
